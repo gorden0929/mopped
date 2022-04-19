@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -p tsconfig.json",
-    "start": "npm run build && node lib/index.js",
+    "start": "npm run build && node dist/index.js",
     "publish": "npm run build && npm publish"
   },
   "author": "gorden0929",
