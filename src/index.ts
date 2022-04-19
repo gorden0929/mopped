@@ -11,7 +11,7 @@ export function removeUndefined(value: any): any {
 function removeUndefinedObject(value: any): any {
   const tempObj: any = {};
   Object.keys(value).forEach(key => {
-    let newVal: any;
+    let newVal: any = undefined;
     if (Array.isArray(value[key])) {
       newVal = removeUndefinedArray(value[key]);
     } else if (isObject(value[key])) {
@@ -19,11 +19,10 @@ function removeUndefinedObject(value: any): any {
     } else if (typeof value[key] !== 'undefined') {
       newVal = value[key];
     }
-    if (newVal) {
+    if (newVal !== undefined) {
       Object.assign(tempObj, { [key]: newVal });
     }
   });
-
   return Object.keys(tempObj).length === 0 ? undefined : tempObj;
 }
 
