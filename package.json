@@ -2,18 +2,16 @@
   "name": "mopped",
   "version": "1.0.1",
   "description": "Remove undefined from json object or array",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -p tsconfig.json",
-    "start": "npm run build && node dist/index.js",
+    "test": "npm run build && node dist/test/main.js",
     "publish": "npm run build && npm publish"
   },
   "author": "gorden0929",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^17.0.24",
     "typescript": "^4.6.3"
   },
   "dependencies": {},
